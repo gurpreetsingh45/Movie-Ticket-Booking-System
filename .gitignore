@@ -10,7 +10,21 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
+# Ignore build directories
+build/
+cmake-build-*/
 
+# Ignore temporary / compiled files
+*.o
+*.obj
+*.exe
+*.out
+*.log
+
+# IDE specific
+.vscode/
+.idea/
+.DS_Store
 # CLion
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
