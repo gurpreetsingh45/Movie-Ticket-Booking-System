@@ -6,7 +6,7 @@ using namespace superman;
 int main() {
     
     Movie M;
-    M.setDetails("Extraction", "Action", 12.99, 100);
+    M.setDetails();
     M.display();
     M.bookTicket(4);
     M.display();

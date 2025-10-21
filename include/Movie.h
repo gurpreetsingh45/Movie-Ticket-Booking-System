@@ -9,7 +9,7 @@ namespace superman{
     public:
         Movie();
         ~Movie();
-        void setDetails(const char *title, const char *genre, float price, int seats);
+        void setDetails();
         void bookTicket(int numTickets);
         void display();
     };

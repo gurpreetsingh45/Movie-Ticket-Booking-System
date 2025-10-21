@@ -16,16 +16,25 @@ namespace superman
         delete[] m_title;
         delete[] m_genre;
     }
-    void Movie::setDetails(const char *title, const char *genre, float price, int seats)
+    void Movie::setDetails()
     {
         delete[] m_title;
         delete[] m_genre;
-        m_title = new char[strlen(title) + 1];
-        strcpy(m_title, title);
-        m_genre = new char[strlen(genre) + 1];
-        strcpy(m_genre, genre);
-        m_price = price;
-        m_seatAvailable = seats;
+        char temp[20];
+        cout << "Title: ";
+        cin.getline(temp, 20);
+        m_title = new char[strlen(temp) + 1];
+        strcpy(m_title, temp);
+        cout << "Genre: ";
+        cin.getline(temp, 20);
+        m_genre = new char[strlen(temp) + 1];
+        strcpy(m_genre, temp);
+        cout << "Ticket Price: ";
+        cin >> m_price;
+        cin.ignore();
+        cout << "Total Seats: ";
+        cin >> m_seatAvailable;
+        cin.ignore();
     }
     void Movie::bookTicket(int numTickets)
     {
