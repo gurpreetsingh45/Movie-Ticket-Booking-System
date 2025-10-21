@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstring>
 #include "../include/Movie.h"
-#include "Movie.h"
 using namespace std;
 namespace superman
 {
@@ -30,14 +29,17 @@ namespace superman
     }
     void Movie::bookTicket(int numTickets)
     {
-        if(m_seatAvailable >= numTickets){
+        if (m_seatAvailable >= numTickets)
+        {
             m_seatAvailable -= numTickets;
         }
-        else{
+        else
+        {
             cout << "Not Enough seats available" << endl;
         }
     }
-    void Movie::display(){
+    void Movie::display()
+    {
         cout << m_title << " (" << m_genre << ") - $" << m_price << " - " << m_seatAvailable << " seats" << endl;
     }
 }
